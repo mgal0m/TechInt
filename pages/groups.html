@@ -1,0 +1,14 @@
+<div>
+    <button ng-click="goToMain()" class="btn myBtn">Powrot</button>
+    <div ng-init="readClients()">
+        <label>Nazwa grupy</label>
+        <input type='text' ng-model="myVar"/>
+        <ul class="list-group">
+            <li ng-repeat="i in clients" class="list-group-item input">
+                <h4><b>Nazwa: </b> {{i}}    <input type="checkbox" ng-model="newObject[i]"> </h4>
+            </li>
+            <pre>{{newObject | json}}</pre>
+        </ul>
+        <button type="button" ng-click='createGroup()'>Dodaj grupe</button>
+    </div>
+</div>

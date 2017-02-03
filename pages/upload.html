@@ -1,0 +1,20 @@
+<div>
+    <div>
+      <form action = "http://localhost:5000/uploader" method = "POST" 
+         enctype = "multipart/form-data">
+         <input type = "file" name = "file" />
+         <input type = "submit"/>
+      </form>
+    </div>
+    <div >
+        <button ng-click="getFiles()" class="btn myBtn">Pobierz liste plikow</button>
+        <div>
+        <ul class="list-group">
+            <li ng-repeat="i in arrFiles" class="list-group-item input">
+                <h4><b>Nazwa: </b> {{i}}</h4> 
+            </li>
+        </ul>
+    </div>
+    </div>
+    <button ng-click="goToMain()" class="btn myBtn">Powrot</button>
+</div>
